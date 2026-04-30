@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoDex | Auth</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Manrope:wght@300;500;800&display=swap" rel="stylesheet">
+</head>
+<body class="auth-page">
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">AUTO<span>DEX</span></a></div>
+    </nav>
+
+    <main class="auth-container">
+        <div class="auth-box">
+            <p class="subtitle">MEMBERSHIP</p>
+            <h1 id="auth-title">Create account.</h1>
+            <form id="auth-form">
+                <div class="input-group" id="name-group">
+                    <label>NAME</label>
+                    <input type="text" name="name" placeholder="Enter your name">
+                </div>
+                <div class="input-group">
+                    <label>EMAIL ADDRESS</label>
+                    <input type="email" name="email" required placeholder="email@example.com">
+                </div>
+                <div class="input-group">
+                    <label>PASSWORD</label>
+                    <input type="password" name="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" id="submit-btn" class="btn-dark-wide">CREATE ACCOUNT</button>
+            </form>
+            <div class="auth-footer">
+                <span id="footer-text">ALREADY A MEMBER? <a href="#" id="toggle-auth">LOGIN &rarr;</a></span>
+            </div>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

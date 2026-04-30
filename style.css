@@ -1,0 +1,281 @@
+:root {
+    --bg-color: #f9f8f6;
+    --text-dark: #121212;
+    --accent-brown: #a67c52;
+    --border-color: #e0ddd7;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; text-decoration: none; }
+body { background: var(--bg-color); color: var(--text-dark); font-family: 'Manrope', sans-serif; -webkit-font-smoothing: antialiased; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 40px; }
+
+/* NAVBAR */
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 25px 5%; border-bottom: 1px solid var(--border-color); position: sticky; top: 0; background: var(--bg-color); z-index: 1000; }
+.logo { font-family: 'Cormorant Garamond', serif; font-size: 26px; }
+.logo a { color: inherit; }
+.logo span { color: var(--accent-brown); }
+.nav-menu a, .nav-auth a { color: var(--text-dark); font-size: 11px; font-weight: 800; margin-left: 25px; letter-spacing: 1.5px; text-transform: uppercase; }
+
+.btn-dark { background: #0e0e0e; color: white; border: none; padding: 12px 24px; font-size: 11px; font-weight: 800; letter-spacing: 1.5px; cursor: pointer; text-transform: uppercase; }
+
+/* Button Styles */
+.btn-dark-link, .view-all {
+    display: inline-block;
+    padding: 16px 32px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: #0e0e0e;
+    color: white;
+    border: 2px solid #0e0e0e;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    text-decoration: none;
+    border-radius: 2px;
+}
+
+.btn-dark-link:hover, .view-all:hover {
+    background: #1a1a1a;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* HERO */
+.hero { padding: 120px 0; }
+.hero h1 { font-family: 'Cormorant Garamond', serif; font-size: 90px; line-height: 0.85; margin-bottom: 40px; font-weight: 400; }
+.subtitle { font-size: 11px; letter-spacing: 3px; color: var(--accent-brown); margin-bottom: 25px; font-weight: 800; text-transform: uppercase; }
+
+/* CARDS */
+.car-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 40px; margin-top: 50px; }
+.car-grid-4col { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; padding-bottom: 80px; }
+.car-card { background: transparent; }
+.car-image { width: 100%; height: 220px; background: #eee; margin-bottom: 20px; }
+.car-info h3 { font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; margin: 10px 0; color: var(--text-dark); }
+.car-meta { font-size: 10px; color: #999; letter-spacing: 2px; font-weight: 800; }
+.car-specs { display: flex; gap: 25px; border-top: 1px solid var(--border-color); padding-top: 15px; }
+
+/* SECTION III - BY BODY */
+.category-layout { display: grid; grid-template-columns: 1fr 2fr; gap: 60px; padding: 100px 0; border-top: 1px solid var(--border-color); }
+.category-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border-color); }
+.cat-item { padding: 40px; border-right: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); cursor: pointer; transition: 0.3s; color: var(--text-dark); }
+.cat-item:hover { background: #f4f2ef; }
+.cat-item span { display: block; font-size: 10px; font-weight: 800; color: var(--accent-brown); margin-bottom: 12px; letter-spacing: 2px; }
+.cat-item h4 { font-family: 'Cormorant Garamond', serif; font-size: 28px; font-weight: 400; }
+
+/* FILTERS */
+.filter-section { padding: 100px 0 50px; }
+.section-serif-title { font-family: 'Cormorant Garamond', serif; font-size: 60px; font-weight: 400; }
+.search-bar { border-bottom: 1px solid var(--border-color); padding-bottom: 20px; margin: 40px 0; display: flex; align-items: center; font-size: 24px; font-family: 'Cormorant Garamond'; color: #ccc; }
+.search-bar input { border: none; background: transparent; width: 100%; outline: none; font-size: 24px; font-family: inherit; margin-left: 15px; color: var(--text-dark); }
+.filters { display: grid; grid-template-columns: repeat(3, 1fr); gap: 60px; }
+.filter-item label { display: block; font-size: 10px; color: var(--accent-brown); font-weight: 800; margin-bottom: 15px; letter-spacing: 2px; }
+.filter-item select { width: 100%; border: none; border-bottom: 1px solid var(--border-color); background: transparent; font-size: 20px; font-family: 'Cormorant Garamond'; padding-bottom: 10px; outline: none; }
+/* Team section */
+.team-section { margin-top:40px; background: transparent; padding:18px 6px; border-radius:8px; text-align: center; }
+.team-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:18px; margin-top:12px; }
+.team-member { background: #fff; padding:14px; border-radius:10px; border:1px solid rgba(2,6,23,0.04); color:#0f172a; box-shadow: 0 6px 18px rgba(2,6,23,0.04); }
+.team-member h3 { margin:0 0 6px 0; color:var(--accent); }
+.contact-info { font-size:0.9rem; color:var(--muted); margin-top:6px; }
+.general-contact a { color:var(--accent); text-decoration:none; font-weight:700; }
+
+/* AUTH PAGE SPECIFIC */
+.auth-page { background: var(--bg-color); height: 100vh; overflow: hidden; }
+
+.auth-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    height: calc(100vh - 80px); 
+}
+
+.auth-box { 
+    width: 100%; 
+    max-width: 400px; 
+    padding: 20px; 
+}
+
+.auth-box h1 { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 52px; 
+    font-weight: 400; 
+    margin-bottom: 40px; 
+    letter-spacing: -1px;
+}
+
+.input-group { 
+    margin-bottom: 30px; 
+    border-bottom: 1px solid var(--border-color); 
+}
+
+.input-group label { 
+    display: block; 
+    font-size: 10px; 
+    font-weight: 800; 
+    color: var(--accent-brown); 
+    letter-spacing: 2px; 
+    margin-bottom: 8px; 
+}
+
+.input-group input { 
+    width: 100%; 
+    border: none; 
+    background: transparent; 
+    padding: 10px 0; 
+    font-size: 16px; 
+    font-family: 'Manrope', sans-serif; 
+    outline: none; 
+    color: var(--text-dark);
+}
+
+.input-group input:focus {
+    outline: none;
+    border-bottom: 2px solid var(--accent-brown);
+}
+
+.btn-dark-wide { 
+    width: 100%; 
+    background: #000; 
+    color: #fff; 
+    padding: 18px; 
+    border: none; 
+    font-size: 11px; 
+    font-weight: 800; 
+    letter-spacing: 2px; 
+    cursor: pointer; 
+    text-transform: uppercase; 
+    margin-top: 20px;
+    transition: 0.3s;
+}
+
+.btn-dark-wide:hover { opacity: 0.8; }
+
+.auth-footer { 
+    margin-top: 30px; 
+    font-size: 11px; 
+    font-weight: 800; 
+    letter-spacing: 1px; 
+}
+
+.auth-footer a { 
+    color: var(--accent-brown); 
+    text-decoration: none; 
+}
+
+/* Responsive tweaks */
+@media (max-width:600px) {
+    .topbar { flex-direction:column; align-items:center; gap:8px; }
+    .search-bar { flex-direction:column; }
+    input { width:100%; max-width:400px; }
+    .brand-btn { width:64px; }
+    .brand-btn .logo { width:56px; height:56px; }
+}
+
+/* Team section - AUTODEX Style */
+.team-section { 
+    margin-top: 20px; 
+    margin: 20px auto 0;
+    padding: 30px 20px; 
+    border-top: 1px solid var(--border-color); 
+    text-align: left; /* Подравняване вляво за редакционен вид */
+}
+
+.team-section h2 { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 24px; 
+    font-weight: 400; 
+    margin-bottom: 25px; 
+    color: var(--text-dark);
+    text-transform: none;
+    letter-spacing: -0.5px;
+}
+
+.team-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); 
+    gap: 25px; 
+    max-width: 900px; 
+    margin: 0; 
+}
+
+.team-member { 
+    width: 100%; 
+    padding: 0; 
+    text-align: left; 
+}
+
+/* Аватари - квадратни или леко омекотени, без градиенти */
+.team-member .avatar { 
+    width: 100%; 
+    height: auto; 
+    aspect-ratio: 1/1; 
+    border-radius: 0; /* Квадратни снимки за по-сериозен вид */
+    margin-bottom: 10px; 
+    background: #eee; 
+    box-shadow: none; 
+    border: 1px solid var(--border-color);
+}
+
+.team-member h3 { 
+    font-family: 'Cormorant Garamond', serif; 
+    font-size: 16px; 
+    font-weight: 500; 
+    margin: 6px 0 3px; 
+    color: var(--text-dark); 
+}
+
+.team-member p.role { 
+    font-family: 'Manrope', sans-serif;
+    font-size: 9px; 
+    font-weight: 800; 
+    text-transform: uppercase; 
+    letter-spacing: 1.5px; 
+    color: var(--accent-brown); 
+    margin-bottom: 8px;
+}
+
+/* Социални мрежи - минималистични текстови линкове */
+.team-member .socials { 
+    display: flex; 
+    gap: 12px; 
+    justify-content: flex-start; 
+}
+
+.team-member .socials a { 
+    font-size: 11px; 
+    color: #999; 
+    text-decoration: none; 
+    text-transform: uppercase;
+    font-weight: 700;
+    transition: color 0.3s;
+}
+
+.team-member .socials a:hover { 
+    color: var(--text-dark); 
+}
+
+/* Company Info - Долна секция (Colophon стил) */
+.company-info { 
+    margin-top: 30px; 
+    margin: 30px auto 0;
+    padding-top: 25px;
+    border-top: 1px solid var(--border-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+    max-width: 900px;
+}
+
+.company-info p {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    line-height: 1.5;
+    color: #666;
+}
+
+@media (max-width: 768px) {
+    .company-info { grid-template-columns: 1fr; gap: 20px; }
+    .team-grid { grid-template-columns: 1fr 1fr; }
+}
