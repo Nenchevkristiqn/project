@@ -3,99 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>UktcDex | Home</title>
+    <title>UktcDex | Auth</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Manrope:wght@300;500;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=Manrope:wght@300;500;800&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="auth-page">
     <nav class="navbar">
-        <div class="logo"><a href="index.html">UKTC<span>DEX</span></a> <small>2026</small></div>
-        <div class="nav-menu">
-            <a href="index.html" class="active-link">НАЧАЛО</a>
-            <a href="catalogue.html">КАТАЛОГ</a>
-        </div>
-        <div class="nav-auth">
-            <a href="auth.html?mode=login">ВХОД</a>
-            <a href="auth.html"><button class="btn-dark">НОВА РЕГИСТРАЦИЯ</button></a>
-        </div>
+        <div class="logo"><a href="index.html">UKTC<span>DEX</span></a></div>
     </nav>
 
-    <header class="hero">
-        <div class="container">
-            <h1>Авто характеристики</h1>
-            <div class="hero-btns">
-                <a href="catalogue.html" class="btn-dark-link">РАЗГЛЕДАЙ КАТАЛОГА &rarr;</a>
-            </div>
-        </div>
-
-    </header>
-
-    <hr>
-
-    <section class="current-shortlist">
-        <div class="container">
-            <div class="section-header">
-                <div>
-                    <h2 class="section-serif-title">Избрани автомобили за вас.</h2>
+    <main class="auth-container">
+        <div class="auth-box">
+            <p class="subtitle">ПРОФИЛ</p>
+            <h1 id="auth-title">РЕГИСТРАЦИЯ</h1>
+            <form id="auth-form">
+                <div class="input-group" id="name-group">
+                    <label>ИМЕ</label>
+                    <input type="text" name="name" placeholder="Въведете вашето име">
                 </div>
-                <a href="catalogue.html" class="view-all">РАЗГЛЕДАЙ ВСИЧКИ &rarr;</a>
-            </div>
-            <div class="car-grid">
-                <article class="car-card">
-                    <div class="car-image"><img src="img/ferrari.jpg" alt="Ferrari"></div>
-                    <div class="car-info">
-                        <p class="car-meta">FERRARI • 2023</p>
-                        <h3>488 GTB</h3>
-                        <div class="car-specs">
-                            <div class="spec"><span>HP</span><strong>661</strong></div>
-                            <div class="spec"><span>0-60</span><strong>3s</strong></div>
-                            <div class="spec"><span>TOP</span><strong>205</strong></div>
-                        </div>
-                    </div>
-                </article>
-                <article class="car-card">
-                    <div class="car-image"><img src="img/porsche.jpg" alt="Porsche"></div>
-                    <div class="car-info">
-                        <p class="car-meta">PORSCHE • 2024</p>
-                        <h3>911 GT3</h3>
-                        <div class="car-specs">
-                            <div class="spec"><span>HP</span><strong>502</strong></div>
-                            <div class="spec"><span>0-60</span><strong>3.2s</strong></div>
-                            <div class="spec"><span>TOP</span><strong>197</strong></div>
-                        </div>
-                    </div>
-                </article>
-                <article class="car-card">
-                    <div class="car-image"><img src="img/honda.jpg" alt="Honda"></div>
-                    <div class="car-info">
-                        <p class="car-meta">HONDA • 2024</p>
-                        <h3>Civic Type R</h3>
-                        <div class="car-specs">
-                            <div class="spec"><span>HP</span><strong>315</strong></div>
-                            <div class="spec"><span>0-60</span><strong>5s</strong></div>
-                            <div class="spec"><span>TOP</span><strong>169</strong></div>
-                        </div>
-                    </div>
-                </article>
+                <div class="input-group">
+                    <label>ИМЕЙЛ АДРЕС</label>
+                    <input type="email" name="email" required placeholder="email@example.com">
+                </div>
+                <div class="input-group">
+                    <label>ПАРОЛА</label>
+                    <input type="password" name="password" required placeholder="••••••••">
+                </div>
+                <button type="submit" id="submit-btn" class="btn-dark-wide">РЕГИСТРАЦИЯ</button>
+            </form>
+            <div class="auth-footer">
+                <span id="footer-text">ВЕЧЕ ИМАТЕ ПРОФИЛ? <a href="#" id="toggle-auth">ВХОД &rarr;</a></span>
             </div>
         </div>
-    </section>
-
-    <hr>
-
-    <div class="company-info">
-            <div>
-                <p><strong>UKTCDEX</strong><br>Каталог за автомобили.</p>
-            </div>
-            <div>
-                <p><strong>СЪЗДАДЕН ОТ</strong><br>Кристиян Иванчев, Георги Шейнов, Стоян Бочев</p>
-            </div>
-            <div>
-                <p><strong></strong><br>© 2026 НПГ по КТС - гр. Правец. Всички права запазени!</p>
-            </div>
-        </div>
-    </div>
-</section>
+    </main>
 
     <script src="script.js"></script>
 </body>
