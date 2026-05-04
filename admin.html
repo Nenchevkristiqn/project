@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+    <meta charset="UTF-8">
+    <title>UktcDex | Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .admin-form { background: #fff; padding: 30px; border: 1px solid #e0ddd7; margin-top: 40px; }
+        .admin-table { width: 100%; border-collapse: collapse; margin-top: 40px; }
+        .admin-table th, .admin-table td { border: 1px solid #e0ddd7; padding: 12px; text-align: left; font-size: 13px; }
+        .btn-delete { background: #ff4444; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo"><a href="index.html">UKTC<span>DEX</span></a></div>
+        <div class="nav-menu"><a href="catalogue.html">КАТАЛОГ</a> <a href="admin.html" class="active-link">АДМИН</a></div>
+    </nav>
+
+    <div class="container">
+        <h2 class="section-serif-title" style="margin-top:40px;">Управление на автомобили</h2>
+        
+        <div class="admin-form">
+            <h3>Добави нов автомобил</h3>
+            <form id="add-car-form">
+                <div class="input-group"><label>Марка</label><input type="text" id="car-marque" required placeholder="напр. bmw"></div>
+                <div class="input-group"><label>Модел</label><input type="text" id="car-model" required placeholder="напр. M5"></div>
+                <div class="input-group"><label>Година</label><input type="number" id="car-year" required></div>
+                <div class="input-group"><label>Категория</label>
+                    <select id="car-category" style="width:100%; padding:10px; border:none; border-bottom:1px solid #e0ddd7;">
+                        <option value="sports">Sports</option>
+                        <option value="suv">SUV</option>
+                        <option value="sedans">Sedans</option>
+                    </select>
+                </div>
+                <div class="input-group"><label>URL на снимка (img/име.jpg)</label><input type="text" id="car-image" required></div>
+                <button type="submit" class="btn-dark-wide">ДОБАВИ В КАТАЛОГА</button>
+            </form>
+        </div>
+
+        <table class="admin-table">
+            <thead>
+                <tr>
+                    <th>Марка</th>
+                    <th>Модел</th>
+                    <th>Година</th>
+                    <th>Действие</th>
+                </tr>
+            </thead>
+            <tbody id="admin-car-list"></tbody>
+        </table>
+    </div>
+
+    <script src="admin.js"></script>
+</body>
+</html>
