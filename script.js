@@ -52,9 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const getYearMatches = (carYear, filterYear) => {
         if (filterYear === 'all') return true;
-        if (filterYear === '2026') return carYear >= 2026;
-        if (filterYear === '2020') return carYear >= 2020;
-        if (filterYear === '2016') return carYear >= 2016;
+        if (filterYear === '2020_a') return carYear <= 2020;
+        if (filterYear === '2020_b') return carYear >= 2020;
         return true;
     };
 
