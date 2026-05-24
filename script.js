@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const cars = [
+    const defaultCars = [
         { marque: 'ferrari', displayMarque: 'Ferrari', model: '488 GTB', year: 2023, category: 'sports', hp: 661, zero60: '3s', topSpeed: 205, image: 'img/ferrari.jpg' },
         { marque: 'porsche', displayMarque: 'Porsche', model: '911 GT3', year: 2024, category: 'sports', hp: 502, zero60: '3.2s', topSpeed: 197, image: 'img/porsche.jpg' },
         { marque: 'honda', displayMarque: 'Honda', model: 'Civic Type R', year: 2024, category: 'sedans', hp: 315, zero60: '5s', topSpeed: 169, image: 'img/honda.jpg' },
@@ -29,6 +29,9 @@ document.addEventListener('DOMContentLoaded', () => {
         { marque: 'nissan', displayMarque: 'Nissan', model: 'GT-R', year: 2024, category: 'sports', hp: 565, zero60: '2.9s', topSpeed: 196, image: 'img/nissan.avif' },
         { marque: 'chevrolet', displayMarque: 'Chevrolet', model: 'Camaro SS', year: 2022, category: 'sports', hp: 455, zero60: '4.0s', topSpeed: 165, image: 'img/chevrolet.jpg' }
     ];
+
+    const storedCars = JSON.parse(localStorage.getItem('stored_cars')) || [];
+    const cars = [...defaultCars, ...storedCars];
 
     const carContainer = document.getElementById('car-container');
 
